@@ -1,0 +1,18 @@
+server:
+  port: 8080
+
+zuul:
+  sensitiveHeaders: Cookie,Set-Cookie
+  routes:
+    oauth-resource:
+      path: /resource/**
+      url: http://localhost:6061/
+    oauth:
+      path: /oauth/**
+      url: http://localhost:6060/oauth
+
+#security:
+#  oauth2:
+#    resource:
+#      jwt:
+#        key-value: 123
