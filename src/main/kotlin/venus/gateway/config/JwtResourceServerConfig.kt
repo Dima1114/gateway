@@ -21,7 +21,7 @@ class JwtResourceServerConfig : ResourceServerConfigurerAdapter() {
     override fun configure(http: HttpSecurity) {
         http
                 .authorizeRequests()
-                .antMatchers("/oauth/**").permitAll()
+                .antMatchers("/oauth/oauth/**").permitAll()
                 .antMatchers("/**").authenticated()
                 .and()
                 .exceptionHandling().accessDeniedHandler(OAuth2AccessDeniedHandler())

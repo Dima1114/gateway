@@ -5,6 +5,8 @@ logging:
   level:
     root: debug
 
+
+# no load balancing
 zuul:
   sensitiveHeaders: Cookie,Set-Cookie
   routes:
@@ -13,7 +15,7 @@ zuul:
       url: http://localhost:6061/
     oauth:
       path: /oauth/**
-      url: http://localhost:6060/oauth
+      url: http://localhost:6060/
 
 #security:
 #  oauth2:
